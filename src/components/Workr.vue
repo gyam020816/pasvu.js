@@ -2,8 +2,8 @@
     <div class="workr">
         this is the workr template
         <div class="workr-anchor">
-            <div class="wbase"></div>
-            <div class="wback"></div>
+            <div class="wbase">F</div>
+            <div class="wback">F</div>
         </div>
     </div>
 </template>
@@ -28,6 +28,8 @@
         width: 200px;
         height: 200px;
         border: 1px solid red;
+        color: white;
+        font-size: 5em;
     }
     .wbase {
         position: absolute;
@@ -36,13 +38,13 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
+        overflow: hidden;
 
         border-top-left-radius: 20px;
         border-top-right-radius: 40px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 40px;
-        border: 4px solid #CC0000;
-        background: red;
+        background: black;
         width: 100px;
         height: 100px;
 
@@ -54,7 +56,7 @@
     }
     .wback {
         position: absolute;
-        top: 5px;
+        top: 25px;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -64,8 +66,7 @@
         border-top-right-radius: 20px;
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 20px;
-        border: 4px solid purple;
-        background: pink;
+        background: red;
         width: 100px;
         height: 100px;
 
