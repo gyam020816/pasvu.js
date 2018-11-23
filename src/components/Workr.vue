@@ -67,7 +67,7 @@
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 20px;
         background: red;
-        width: 100px;
+        width: 75px;
         height: 100px;
 
         transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 55deg) rotate3d(0, 1, 0, 80deg);
