@@ -2,6 +2,7 @@
     <div class="workr">
         this is the workr template
         <div class="workr-anchor">
+            <div class="wradius">X</div>
             <div class="wbase">F elt A</div>
             <div class="wback">F elt B</div>
         </div>
@@ -77,5 +78,23 @@
     .workr-anchor:hover > .wback {
         transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 535deg) rotate3d(0, 1, 0, 80deg) rotate3d(0, 0, 1, -90deg);
     }
+    .wradius {
+        position: absolute;
+        top: 145px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
 
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: blue;
+        width: 20px;
+        height: 75px;
+
+        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 90deg) rotate3d(0, 1, 0, 90deg)  rotate3d(0, 0, 1, -90deg);
+        transition: 3s ease-in-out;
+    }
 </style>
