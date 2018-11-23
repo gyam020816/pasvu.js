@@ -2,8 +2,8 @@
     <div class="workr">
         this is the workr template
         <div class="workr-anchor">
-            <div class="wbase">F</div>
-            <div class="wback">F</div>
+            <div class="wbase">F elt A</div>
+            <div class="wback">F elt B</div>
         </div>
     </div>
 </template>
@@ -29,7 +29,7 @@
         height: 200px;
         border: 1px solid red;
         color: white;
-        font-size: 5em;
+        font-size: 2em;
     }
     .wbase {
         position: absolute;
@@ -41,41 +41,41 @@
         overflow: hidden;
 
         border-top-left-radius: 20px;
-        border-top-right-radius: 40px;
-        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
         background: black;
         width: 100px;
         height: 100px;
 
-        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 55deg);
-        transition: 1s ease-in-out;
+        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 55deg) rotate3d(0, 0, 1, -90deg);
+        transition: 3s ease-in-out;
     }
     .workr-anchor:hover > .wbase {
-        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 235deg);
+        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 535deg) rotate3d(0, 0, 1, -90deg);
     }
     .wback {
         position: absolute;
-        top: 25px;
+        top: 45px;
         left: 0;
         right: 0;
         margin-left: auto;
         margin-right: auto;
 
         border-top-left-radius: 40px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         background: red;
-        width: 75px;
-        height: 100px;
+        width: 100px;
+        height: 75px;
 
-        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 55deg) rotate3d(0, 1, 0, 80deg);
+        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 55deg) rotate3d(0, 1, 0, 80deg)  rotate3d(0, 0, 1, -90deg);
         transform-origin: center center 55px;
-        transition: 1s ease-in-out;
+        transition: 3s ease-in-out;
     }
     .workr-anchor:hover > .wback {
-        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 235deg) rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(1, 0, 0, 55deg) rotate3d(0, 0, 1, 535deg) rotate3d(0, 1, 0, 80deg) rotate3d(0, 0, 1, -90deg);
     }
 
 </style>
