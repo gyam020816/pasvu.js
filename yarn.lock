@@ -32,7 +32,6 @@
 "@vue/cli-plugin-typescript@^3.1.2":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-typescript/-/cli-plugin-typescript-3.1.1.tgz#9c3a62795dd6f7359325384b303904e7d7b76d8d"
-  integrity sha512-DJqBo6y+w6ZJZBXDK6xk/4EB0/jy9aOemX356QSYxDsTNsHx1Okg3RuCq/wN0yElVVthzi5FEnDlfGymAWzqig==
   dependencies:
     "@types/webpack-env" "^1.13.6"
     "@vue/cli-shared-utils" "^3.1.1"

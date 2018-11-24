@@ -1,5 +1,5 @@
 <template>
-    <div class="workr">
+    <div class="workr" v-on:mousedown="moveOn" v-on:mouseup="moveOff" v-on:mousemove="moveDuring">
         this is the workr template {{transform}}
         <div class="workr-anchor">
             <span class="label">anchor</span>
@@ -22,9 +22,9 @@
                 </div>
             </div>
         </div>
-        <input v-model="c_rp" type="number" min="-360" max="360" v-on:change="cam" v-on:click="cam">
-        <input v-model="c_ry" type="number" min="-360" max="360" v-on:change="cam" v-on:click="cam">
-        <input v-model="c_rr" type="number" min="-360" max="360" v-on:change="cam" v-on:click="cam">
+        <input v-model="c_rp" type="number" min="-360" max="360" v-on:change="updateCam" v-on:click="updateCam">
+        <input v-model="c_ry" type="number" min="-360" max="360" v-on:change="updateCam" v-on:click="updateCam">
+        <input v-model="c_rr" type="number" min="-360" max="360" v-on:change="updateCam" v-on:click="updateCam">
     </div>
 </template>
 
@@ -39,18 +39,38 @@
             c_rp: 55,
             c_ry: 0,
             c_rr: 0,
+            m_x: 0,
+            m_y: 0,
+            moving: false,
         }},
         methods: {
-            cam(): void {
+            updateCam() {
                 this.transform = ""
                     + " rotate3d(1, 0, 0, " + this.c_rp + "deg)"
                     + " rotate3d(0, 0, 1, " + this.c_ry + "deg)"
                     + " rotate3d(0, 1, 0, " + this.c_rr + "deg)"
                 ;
+            },
+            moveOn(event) {
+                this.m_x = event.clientX;
+                this.m_y = event.clientY;
+                this.moving = true;
+            },
+            moveOff(event) {
+                this.moving = false;
+            },
+            moveDuring(event) {
+                if (this.moving) {
+                    this.c_rp += this.m_y - event.clientY;
+                    this.c_ry += this.m_x - event.clientX;
+                    this.m_x = event.clientX;
+                    this.m_y = event.clientY;
+                    this.updateCam()
+                }
             }
         },
         created(): void {
-            this.cam();
+            this.updateCam();
         }
     });
 </script>
@@ -68,6 +88,7 @@
     .workr {
         color: red;
         border: 1px solid purple;
+        user-select: none;
     }
 
     .workr-anchor {
