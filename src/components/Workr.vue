@@ -30,6 +30,7 @@
 
 <script lang="ts">
     import Vue from "vue";
+    import Plane from "@/components/Plane.vue";
 
     export default Vue.extend({
         name: "Workr",
@@ -210,16 +211,32 @@
     .wradius {
         position: absolute;
         right: 90px;
-        bottom: -10px;
+        bottom: 60px;
 
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        background: blue;
+        background: black;
         width: 20px;
         height: 75px;
 
-        transform: rotate3d(0, 0, 1, 90deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, -90deg);
+        transform: translateZ(-40px) rotate3d(0, 0, 1, 90deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, -90deg);
+    }
+
+    .wfeet {
+        position: absolute;
+        right: 90px;
+        bottom: 60px;
+
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: red;
+        width: 70px;
+        height: 15px;
+
+        transform: translateZ(-40px) rotate3d(0, 0, 1, 90deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, -100deg);
     }
 </style>
